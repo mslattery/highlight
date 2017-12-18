@@ -15,11 +15,12 @@
         <dependency>com.atlassian.auiplugin:ajs</dependency>
 
         <resource type="download" name="highlight.css" location="/css/highlight.css"/>
+        <dependency>com.atlassian.confluence.tinymceplugin:editor-resources</dependency>
         <resource type="download" name="highlight.js" location="/js/highlight.js"/>
         <resource type="download" name="images/" location="/images"/>
 
         <context>highlight</context>
-    </web-resource>
+    </web-resource>s 
 
     <xhtml-macro name="highlight" class="com.sncsoftware.confluence.macro.highlight" key='highlight'>
         <description key="highlight.macro.desc"/>
@@ -28,6 +29,12 @@
             <parameter name="Text" type="string" required="true"/>
             <parameter name="Color" type="string" required="true" desc="You can use named colors like yellow, or hex codes prepended with #, like #FF0000." />          
         </parameters>
+        <property-panel> 
+            <button id="yellow" label="Yellow"/> 
+            <button id="blue" label="Blue"/> 
+            <button id="green" label="Green"/> 
+            <button id="red" label="Red"/> 
+        </property-panel> 
     </xhtml-macro>
 
 </atlassian-plugin>
