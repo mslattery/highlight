@@ -33,6 +33,12 @@
                 <value name="blue"/>
             </parameter>
         </parameters>
+        <property-panel>
+            <button id="red" label="Red"/>
+            <button id="green" label="Green"/>
+            <button id="blue" label="Blue"/>
+            <button id="yellow" label="yellow"/>
+        </property-panel>
     </xhtml-macro>
 
 </atlassian-plugin>
