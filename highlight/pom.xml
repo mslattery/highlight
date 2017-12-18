@@ -10,11 +10,11 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <organization>
-        <name>Example Company</name>
-        <url>http://www.example.com/</url>
+        <name>Strategic Network Consulting</name>
+        <url>https://www.sncsoftware.com/</url>
     </organization>
 
-    <name>highlight</name>
+    <name>Highlight Text</name>
     <description>This is the com.sncsoftware.confluence:highlight plugin for Atlassian Confluence.</description>
     <packaging>atlassian-plugin</packaging>
 
