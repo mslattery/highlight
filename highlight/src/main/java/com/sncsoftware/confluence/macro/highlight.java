@@ -3,28 +3,26 @@ package com.sncsoftware.confluence.macro;
 import com.atlassian.confluence.content.render.xhtml.ConversionContext;
 import com.atlassian.confluence.macro.Macro;
 import com.atlassian.confluence.macro.MacroExecutionException;
-import com.atlassian.confluence.macro.ResourceAware;
-import com.atlassian.confluence.setup.settings.SettingsManager;
 
 import java.util.Map;
 
 /*@Scanned*/
-public class highlight implements Macro, ResourceAware {
+public class highlight implements Macro {
 
-	private final SettingsManager settingsManager;
-    public highlight(SettingsManager settingsManager)
-    {
-        this.settingsManager = settingsManager;
-    }
+    private static final String PARAM_NAME_TEXT = "Text";
+    private static final String PARAM_NAME_COLOR = "Color";
+    private static final String PARAM_NAME_CUSTOM_COLOR = "Custom Color";
 
-    public String execute(Map<String, String> map, String s, ConversionContext conversionContext) throws MacroExecutionException {
-        return ("<span style=\"background-color: " + map.get("Color") + ";\">" + map.get("Text") +"</span>");
-    }
+    public String execute(Map<String, String> params, String s, ConversionContext conversionContext) throws MacroExecutionException {
+
+ 		if (params.containsKey(PARAM_NAME_CUSTOM_COLOR))
+ 		{
+ 			return ("<span style=\"background-color: " + params.get(PARAM_NAME_CUSTOM_COLOR) + ";\">" + params.get(PARAM_NAME_TEXT) +"</span>");
+ 		}
+    	return ("<span style=\"background-color: " + params.get(PARAM_NAME_COLOR) + ";\">" + params.get(PARAM_NAME_TEXT) +"</span>");
+     }
 
     public BodyType getBodyType() { return BodyType.NONE; }
 
     public OutputType getOutputType() { return OutputType.BLOCK; }
-
-  	public String getResourcePath() { return null; }
-    public void setResourcePath(String s) {}
 }
