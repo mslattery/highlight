@@ -25,14 +25,8 @@
         <description key="highlight.macro.desc"/>
         <category name="formatting"/>
         <parameters>
-            <parameter name="Text" type="string" default ="empty" required="true"/>
-            <parameter name="Custom Color" type="string" default="" />
-            <parameter name="Color" type="enum" default="yellow">
-                <value name="yellow"/>
-                <value name="red"/>
-                <value name="green"/>
-                <value name="blue"/>
-            </parameter>
+            <parameter name="Text" type="string" required="true"/>
+            <parameter name="Color" type="string" required="true" desc="You can use named colors like yellow, or hex codes prepended with #, like #FF0000." />          
         </parameters>
     </xhtml-macro>
 
