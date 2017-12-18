@@ -6,4 +6,4 @@ The following is a set of guidelines for contributing to Highlight, which is hos
 
 #### Table Of Contents
 
-[Code of Conduct](#code-of-conduct)
+[Code of Conduct](https://github.com/mslattery/highlight/blob/master/CODE_OF_CONDUCT.md)
