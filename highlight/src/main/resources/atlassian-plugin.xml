@@ -25,20 +25,15 @@
         <description key="highlight.macro.desc"/>
         <category name="formatting"/>
         <parameters>
-            <parameter name="Text" type="string" default ="" />
-            <parameter name="Color" type="enum">
+            <parameter name="Text" type="string" default ="empty" required="true"/>
+            <parameter name="Custom Color" type="string" default="" />
+            <parameter name="Color" type="enum" default="yellow">
                 <value name="yellow"/>
                 <value name="red"/>
                 <value name="green"/>
                 <value name="blue"/>
             </parameter>
         </parameters>
-        <property-panel>
-            <button id="red" label="Red"/>
-            <button id="green" label="Green"/>
-            <button id="blue" label="Blue"/>
-            <button id="yellow" label="yellow"/>
-        </property-panel>
     </xhtml-macro>
 
 </atlassian-plugin>
