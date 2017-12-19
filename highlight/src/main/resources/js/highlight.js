@@ -1,3 +1,9 @@
+
+AJS.toInit(function($) { var PLUGIN_KEY = "com.sncsoftware.confluence.macro:highlight";
+    Confluence.HighlightAction.registerButtonHandler(PLUGIN_KEY, { onClick: function(selectionObject) { Confluence.HighlightDemoDialogs.showHighlightDemoDialog(selectionObject); },
+        shouldDisplay: Confluence.HighlightAction.WORKING_AREA.MAINCONTENT_ONLY }); });
+
+
 var updateMacro = function(macroNode, param) {
     var $macroDiv = AJS.$(macroNode);
     AJS.Rte.getEditor().selection.select($macroDiv[0]);
